@@ -1,0 +1,115 @@
+<?xml version="1.0" standalone="no"?>
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN"
+"http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
+
+<svg width="396" height="296" view_box="0 0 396 296"
+xmlns="http://www.w3.org/2000/svg"
+xmlns:link="http://www.w3.org/1999/xlink">\n\n<desc>Généré par Mocodo 2.3.7 le Wed, 12 Aug 2020 00:25:47</desc>
+
+<rect id="frame" x="0" y="0" width="396" height="296" fill="#f7f7f7" stroke="none" stroke-width="0"/>
+
+<!-- Association COME FROM -->
+<line x1="176" y1="110" x2="54" y2="110" stroke="#9970ab" stroke-width="2"/>
+<text x="111" y="127.0" fill="#1b7837" font-family="Verdana" font-size="12">1,1</text>
+<line x1="54" y1="228" x2="54" y2="110" stroke="#9970ab" stroke-width="2"/>
+<text x="59.0" y="161" fill="#1b7837" font-family="Verdana" font-size="12">1,1</text>
+<line x1="54" y1="34" x2="54" y2="110" stroke="#9970ab" stroke-width="2"/>
+<text x="59.0" y="76" fill="#1b7837" font-family="Verdana" font-size="12">0,N</text>
+<g id="association-COME FROM">
+	<path d="M 85 85 a 14 14 90 0 1 14 14 V 110 h -90 V 99 a 14 14 90 0 1 14 -14" fill="#c2a5cf" stroke="#c2a5cf" stroke-width="0"/>
+	<path d="M 99 110.0 v 11 a 14 14 90 0 1 -14 14 H 23 a 14 14 90 0 1 -14 -14 V 110.0 H 90" fill="#e7d4e8" stroke="#e7d4e8" stroke-width="0"/>
+	<rect x="9" y="85" width="90" height="50" fill="none" rx="14" stroke="#9970ab" stroke-width="2"/>
+	<line x1="9" y1="110" x2="99" y2="110" stroke="#9970ab" stroke-width="1"/>
+	<text x="16" y="102.7" fill="#000000" font-family="Verdana" font-size="12">COME FROM</text>
+</g>
+
+<!-- Association ASSOCIATION -->
+<line x1="176" y1="110" x2="176" y2="228" stroke="#9970ab" stroke-width="2"/>
+<text x="181.0" y="178" fill="#1b7837" font-family="Verdana" font-size="12">0,N</text>
+<line x1="54" y1="228" x2="176" y2="228" stroke="#9970ab" stroke-width="2"/>
+<text x="98" y="245.0" fill="#1b7837" font-family="Verdana" font-size="12">0,N</text>
+<g id="association-ASSOCIATION">
+	<path d="M 213 203 a 14 14 90 0 1 14 14 V 228 h -102 V 217 a 14 14 90 0 1 14 -14" fill="#c2a5cf" stroke="#c2a5cf" stroke-width="0"/>
+	<path d="M 227 228.0 v 11 a 14 14 90 0 1 -14 14 H 139 a 14 14 90 0 1 -14 -14 V 228.0 H 102" fill="#e7d4e8" stroke="#e7d4e8" stroke-width="0"/>
+	<rect x="125" y="203" width="102" height="50" fill="none" rx="14" stroke="#9970ab" stroke-width="2"/>
+	<line x1="125" y1="228" x2="227" y2="228" stroke="#9970ab" stroke-width="1"/>
+	<text x="132" y="220.7" fill="#000000" font-family="Verdana" font-size="12">ASSOCIATION</text>
+</g>
+
+<!-- Entity ORIGIN -->
+<g id="entity-ORIGIN">
+	<g id="frame-ORIGIN">
+		<rect x="25" y="9" width="58" height="25" fill="#a6dba0" stroke="#a6dba0" stroke-width="0"/>
+		<rect x="25" y="34.0" width="58" height="25" fill="#d9f0d3" stroke="#d9f0d3" stroke-width="0"/>
+		<rect x="25" y="9" width="58" height="50" fill="none" stroke="#5aae61" stroke-width="2"/>
+		<line x1="25" y1="34" x2="83" y2="34" stroke="#5aae61" stroke-width="1"/>
+	</g>
+	<text x="30" y="26.7" fill="#000000" font-family="Verdana" font-size="12">ORIGIN</text>
+	<text x="30" y="51.8" fill="#000000" font-family="Verdana" font-size="12">name</text>
+	<line x1="30" y1="54" x2="65" y2="54" stroke="#000000" stroke-width="1"/>
+</g>
+
+<!-- Entity CHEESE -->
+<g id="entity-CHEESE">
+	<g id="frame-CHEESE">
+		<rect x="137" y="59" width="78" height="25" fill="#a6dba0" stroke="#a6dba0" stroke-width="0"/>
+		<rect x="137" y="84.0" width="78" height="77" fill="#d9f0d3" stroke="#d9f0d3" stroke-width="0"/>
+		<rect x="137" y="59" width="78" height="102" fill="none" stroke="#5aae61" stroke-width="2"/>
+		<line x1="137" y1="84" x2="215" y2="84" stroke="#5aae61" stroke-width="1"/>
+	</g>
+	<text x="151" y="76.7" fill="#000000" font-family="Verdana" font-size="12">CHEESE</text>
+	<text x="142" y="101.7" fill="#000000" font-family="Verdana" font-size="12">name</text>
+	<line x1="142" y1="104" x2="177" y2="104" stroke="#000000" stroke-width="1"/>
+	<text x="142" y="118.8" fill="#000000" font-family="Verdana" font-size="12">milk</text>
+	<text x="142" y="135.8" fill="#000000" font-family="Verdana" font-size="12">picture</text>
+	<text x="142" y="152.8" fill="#000000" font-family="Verdana" font-size="12">description</text>
+</g>
+
+<!-- Entity USER_PROPOSAL -->
+<g id="entity-USER_PROPOSAL">
+	<g id="frame-USER_PROPOSAL">
+		<rect x="259" y="186" width="128" height="25" fill="#a6dba0" stroke="#a6dba0" stroke-width="0"/>
+		<rect x="259" y="211.0" width="128" height="59" fill="#d9f0d3" stroke="#d9f0d3" stroke-width="0"/>
+		<rect x="259" y="186" width="128" height="84" fill="none" stroke="#5aae61" stroke-width="2"/>
+		<line x1="259" y1="211" x2="387" y2="211" stroke="#5aae61" stroke-width="1"/>
+	</g>
+	<text x="270" y="203.7" fill="#000000" font-family="Verdana" font-size="12">USER_PROPOSAL</text>
+	<text x="264" y="228.8" fill="#000000" font-family="Verdana" font-size="12">username</text>
+	<line x1="264" y1="231" x2="325" y2="231" stroke="#000000" stroke-width="1"/>
+	<text x="264" y="245.8" fill="#000000" font-family="Verdana" font-size="12">main_product</text>
+	<text x="264" y="262.8" fill="#000000" font-family="Verdana" font-size="12">associated_product</text>
+</g>
+
+<!-- Entity USER -->
+<g id="entity-USER">
+	<g id="frame-USER">
+		<rect x="289" y="59" width="68" height="25" fill="#a6dba0" stroke="#a6dba0" stroke-width="0"/>
+		<rect x="289" y="84.0" width="68" height="77" fill="#d9f0d3" stroke="#d9f0d3" stroke-width="0"/>
+		<rect x="289" y="59" width="68" height="102" fill="none" stroke="#5aae61" stroke-width="2"/>
+		<line x1="289" y1="84" x2="357" y2="84" stroke="#5aae61" stroke-width="1"/>
+	</g>
+	<text x="306" y="76.7" fill="#000000" font-family="Verdana" font-size="12">USER</text>
+	<text x="294" y="101.7" fill="#000000" font-family="Verdana" font-size="12">name</text>
+	<line x1="294" y1="104" x2="329" y2="104" stroke="#000000" stroke-width="1"/>
+	<text x="294" y="118.8" fill="#000000" font-family="Verdana" font-size="12">email</text>
+	<text x="294" y="135.8" fill="#000000" font-family="Verdana" font-size="12">password</text>
+	<text x="294" y="152.8" fill="#000000" font-family="Verdana" font-size="12">roles</text>
+</g>
+
+<!-- Entity WINE -->
+<g id="entity-WINE">
+	<g id="frame-WINE">
+		<rect x="15" y="169" width="78" height="25" fill="#a6dba0" stroke="#a6dba0" stroke-width="0"/>
+		<rect x="15" y="194.0" width="78" height="93" fill="#d9f0d3" stroke="#d9f0d3" stroke-width="0"/>
+		<rect x="15" y="169" width="78" height="118" fill="none" stroke="#5aae61" stroke-width="2"/>
+		<line x1="15" y1="194" x2="93" y2="194" stroke="#5aae61" stroke-width="1"/>
+	</g>
+	<text x="36" y="186.7" fill="#000000" font-family="Verdana" font-size="12">WINE</text>
+	<text x="20" y="211.7" fill="#000000" font-family="Verdana" font-size="12">appellation</text>
+	<line x1="20" y1="214" x2="87" y2="214" stroke="#000000" stroke-width="1"/>
+	<text x="20" y="228.8" fill="#000000" font-family="Verdana" font-size="12">name</text>
+	<text x="20" y="245.8" fill="#000000" font-family="Verdana" font-size="12">type</text>
+	<text x="20" y="262.8" fill="#000000" font-family="Verdana" font-size="12">picture</text>
+	<text x="20" y="279.8" fill="#000000" font-family="Verdana" font-size="12">description</text>
+</g>
+</svg>
