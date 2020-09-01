@@ -47,4 +47,27 @@ class WineRepository extends ServiceEntityRepository
         ;
     }
     */
+    
+    /**
+     * @return Wine Return an array of Wine objects
+     *
+     */
+    public function findWineWithAllInfos($wine)
+    {
+        $entityManager = $this->getEntityManager();
+
+        $query = $entityManager->createQuery(
+            'SELECT wine, cheese, origin
+                FROM App\Entity\Wine AS wine
+                    LEFT JOIN wine.cheeses AS cheese
+                    LEFT JOIN wine.origin AS origin
+                    
+                WHERE wines = :wine_parameter'
+        );
+
+        $query->setParameter('wine_parameter', $wine);
+
+        // return Cheese Object
+        return $query->getOneOrNullResult();
+    }
 }
