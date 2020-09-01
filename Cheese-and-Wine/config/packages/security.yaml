@@ -4,16 +4,48 @@ security:
             algorithm: auto
     # https://symfony.com/doc/current/security.html#where-do-users-come-from-user-providers
     providers:
-        users_in_memory: { memory: null }
+        app_user_provider:
+            entity:
+                class: App\Entity\User
+                property: email
     firewalls:
         dev:
             pattern: ^/(_(profiler|wdt)|css|images|js)/
             security: false
         main:
+            pattern: ^/
+            access_denied_handler: App\Security\AccessDeniedHandler
+
             anonymous: true
             lazy: true
-            provider: users_in_memory
+            provider: app_user_provider
+            guard:
+                authenticators:
+                    - App\Security\TokenAuthenticator
+                #    - App\Security\ConnexionBackEnd\LoginFormAuthenticator
+                #entry_point: App\Security\ConnexionBackEnd\LoginFormAuthenticator
+            json_login:
+                login_path: api_login
+                check_path: api_login
+            logout:
+                #success_handler: App\Security\LogoutHandler
+                path: api/logout
+                #target: http://ec2-3-80-235-42.compute-1.amazonaws.com
+                #target: http://192.168.56.101/wine-and-cheese/fromages-et-vin/Cheese-and-Wine/public/api/cheeses
+                
 
+            
+            #form_login:
+            #    login_path: app_login
+            #    check_path: app_login
+            #    #username_parameter: login[_username]
+            #    #password_parameter: login[_password]
+            #   
+            #logout:
+            #    path: /app/logout
+            #    target: /app/login 
+        
+            #target: http://54.152.134.184/fromages-et-vin/Cheese-and-Wine/public/api/cheeses
             # activate different ways to authenticate
             # https://symfony.com/doc/current/security.html#firewalls-authentication
 
@@ -22,6 +54,17 @@ security:
 
     # Easy way to control access for large sections of your site
     # Note: Only the *first* access control that matches will be used
+    
     access_control:
-        # - { path: ^/admin, roles: ROLE_ADMIN }
-        # - { path: ^/profile, roles: ROLE_USER }
+       
+        # API'S - Back Office 
+        - { path: ^/api/back/user, methods: [GET,POST,PATCH,PUT,DELETE], roles: ROLE_SUPER_ADMIN } 
+        #- { path: ^/api/back/cheese|wine, methods: [ADD,EDIT,PUT,DELETE], roles: ROLE_ADMIN }    
+        - { path: ^/api/back, methods: [POST,PUT,EDIT,DELETE,GET], roles: ROLE_ADMIN }
+
+        # API'S - Front 
+        - { path: ^/api/login|logout, roles: IS_AUTHENTICATED_ANONYMOUSLY }
+        #- { path: ^/api, methods: [ADD,PUT,EDIT,GET], roles: ROLE_USER }
+    
+    role_hierarchy:
+        ROLE_SUPER_ADMIN: ROLE_ADMIN #Pour les routes de modération des USERS
