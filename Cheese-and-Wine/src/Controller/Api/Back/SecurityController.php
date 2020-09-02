@@ -10,6 +10,7 @@ use Symfony\Component\HttpFoundation\Response;
 use Symfony\Component\Routing\Annotation\Route;
 use Symfony\Component\HttpFoundation\JsonResponse;
 use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
+use Symfony\Component\Security\Http\Authentication\AuthenticationUtils;
 
 
 class SecurityController extends AbstractController
@@ -18,7 +19,7 @@ class SecurityController extends AbstractController
      * @Route("/api/login", name="api_login", methods={"POST"})
      * 
      */
-    public function login(EntityManagerInterface $em)
+    /*public function login(EntityManagerInterface $em)
     {
         $user = $this->getUser();
         
@@ -32,6 +33,25 @@ class SecurityController extends AbstractController
             'username' => $user->getUsername(),
             'roles' => $user->getRoles(),
             'apiToken' => $user->getApiToken()
+        ]);
+    }*/
+    /**
+     * @Route("/login", name="app_login")
+     */
+    public function login(AuthenticationUtils $authenticationUtils)
+    {
+        // if ($this->getUser()) {
+        //     return $this->redirectToRoute('target_path');
+        // }
+
+        // get the login error if there is one
+        $error = $authenticationUtils->getLastAuthenticationError();
+        // last username entered by the user
+        $lastUsername = $authenticationUtils->getLastUsername();
+
+        return $this->render('security/login.html.twig', [
+            'last_username' => $lastUsername,
+            'error' => $error
         ]);
     }
     
@@ -56,25 +76,37 @@ class SecurityController extends AbstractController
 
         return $this->json($user, 200, [], ['groups' => 'user_detail']);
     }
+    /**
+     * @Route("/logout", name="app_logout")
+     */
+    public function logout()
+    {
+        //throw new \LogicException('This method can be blank - it will be intercepted by the logout key on your firewall.');
+        
+        return 
+    New JsonResponse([
+            'message' => 'Deconnexion réussie']);
+       
+    }
     
     /**
      * @Route("/api/logout", name="api_logout", methods={"POST"})
      */
-    public function logout(EntityManagerInterface $em)
+   /* public function logout(EntityManagerInterface $em)
     {
         // Effacera le token en BDD après la deconnexion de l'user
         
-/*       $user = $this->getUser();
+       $user = $this->getUser();
         if (!$user) {
             throw $this->createAccessDeniedException();
         }
         $user->setApiToken(null);
         $em->persist($user);
         
-        $em->flush();  */
+        $em->flush();  
 
         return New JsonResponse([
             'message' => 'Deconnexion réussie']);
 
-    }
+    }*/
 }

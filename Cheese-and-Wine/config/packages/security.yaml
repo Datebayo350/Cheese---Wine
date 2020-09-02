@@ -21,29 +21,31 @@ security:
             provider: app_user_provider
             guard:
                 authenticators:
-                    - App\Security\TokenAuthenticator
-                #    - App\Security\ConnexionBackEnd\LoginFormAuthenticator
+                #- App\Security\TokenAuthenticator
+                - App\Security\LoginAuthenticator
+           
+                #- App\Security\ConnexionBackEnd\LoginFormAuthenticator
                 #entry_point: App\Security\ConnexionBackEnd\LoginFormAuthenticator
-            json_login:
-                login_path: api_login
-                check_path: api_login
-            logout:
+            #json_login:
+                #login_path: api_login
+                #check_path: api_login
+            #logout:
                 #success_handler: App\Security\LogoutHandler
-                path: api/logout
+                #path: api/logout
                 #target: http://ec2-3-80-235-42.compute-1.amazonaws.com
                 #target: http://192.168.56.101/wine-and-cheese/fromages-et-vin/Cheese-and-Wine/public/api/cheeses
                 
 
             
-            #form_login:
-            #    login_path: app_login
-            #    check_path: app_login
-            #    #username_parameter: login[_username]
-            #    #password_parameter: login[_password]
-            #   
-            #logout:
-            #    path: /app/logout
-            #    target: /app/login 
+            form_login:
+                login_path: app_login
+                check_path: app_login
+                #username_parameter: login[_username]
+                #password_parameter: login[_password]
+               
+            logout:
+                path: /app/logout
+                target: /app/login 
         
             #target: http://54.152.134.184/fromages-et-vin/Cheese-and-Wine/public/api/cheeses
             # activate different ways to authenticate
