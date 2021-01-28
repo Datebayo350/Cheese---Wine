@@ -15,6 +15,7 @@ use Symfony\Component\Security\Http\Authentication\AuthenticationUtils;
 
 class SecurityController extends AbstractController
 {
+    //test
     /**
      * @Route("/api/login", name="api_login", methods={"POST"})
      * 
@@ -82,11 +83,12 @@ class SecurityController extends AbstractController
     public function logout()
     {
         //throw new \LogicException('This method can be blank - it will be intercepted by the logout key on your firewall.');
+      
+        dd($_COOKIE);
+        //! Si on ne set pas le contenu = erreur 500
+        //$user->eraseCredentials
+        //return $response->setcontent('<h1> Deconnexion Réussie');
         
-        return 
-    New JsonResponse([
-            'message' => 'Deconnexion réussie']);
-       
     }
     
     /**

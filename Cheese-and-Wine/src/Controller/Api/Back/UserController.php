@@ -20,6 +20,7 @@ class UserController extends AbstractController
 {
     // Property to get the encoder
     private $encoder;
+    
 
     // Get the encoder service in the Construct function
     public function __construct(UserPasswordEncoderInterface $encoder)
